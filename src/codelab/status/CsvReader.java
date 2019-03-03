@@ -63,6 +63,13 @@ public class CsvReader {
             }
         }
 
+        int StudentCount = roster.size();
+                int totalScore = 0;
+
+                for(Trainee tre: roster){
+                    totalScore = totalScore + tre.getNumberOfExercisesSolved();
+                }
+        System.out.println("The average score of the class is: " + totalScore/StudentCount);
     }
 
 }
