@@ -8,5 +8,18 @@ public class Fibonacci {
          */
 
 
+        int n = 40;
+        int i =0;
+        int l =1;
+
+        for (int k = 1; k<=n; k++) {
+
+            System.out.println(i + " ");
+
+            int sum=i+l;
+
+            i=l;
+            l=sum;
+        }
     }
 }
