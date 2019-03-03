@@ -8,8 +8,24 @@ public class Pattern {
 		 *
 		 *
 		 */
-		
 
+				int j = 1;
+				int k = 0;
+				int num = 100;
 
-	}
-}
+				int[] arr = new int[40];
+
+				while (num > 0) {
+					for (int i = 0; i < 10; i++) {
+						System.out.print(" " + num);
+						arr[k] = num;
+						num -= j;
+						k++;
+
+					}
+					j++;
+				}
+				System.out.println(" ");
+			}
+		}
+
