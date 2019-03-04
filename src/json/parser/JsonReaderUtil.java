@@ -50,14 +50,28 @@ public class JsonReaderUtil {
         } else if (root instanceof JsonArray) {
             jsonArray =  root.getAsJsonArray();
         }
+
+        emp = new Employee();
         for (int i = 0; i < jsonArray.size()-1; i++) {
             try {
                 JsonObject jsonobject = jsonArray.get(i).getAsJsonObject();
                 //you code start here
                 String empEmail = jsonobject.get("empEmail").toString();
+                emp.setEmpEmail(empEmail);
+                String empName = jsonobject.get("empName").toString();
+                emp.setEmpName(empName);
+                String salary = jsonobject.get("salary").toString();
+                emp.setSalary(salary);
+                String department = jsonobject.get("department").toString();
+                emp.setDepartment(department);
+
+                emp = new Employee(emp.getEmpEmail(), emp.getEmpName(), emp.getSalary(), emp.getDepartment());
+
+                empList.add(emp);
 
 
-            }catch(Exception ex){
+            }catch(Exception ex)
+            {
 
             }
         }
